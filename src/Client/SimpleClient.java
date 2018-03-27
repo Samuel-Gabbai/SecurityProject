@@ -5,4 +5,5 @@ public class SimpleClient {
 		Client c = new Client("Sam","localhost", 8080);
 		c.connect();
 	}
+	
 }
