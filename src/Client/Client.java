@@ -3,7 +3,7 @@ package Client;
 import java.net.Socket;
 
 public class Client {
-	private Socket s;
+/*	private Socket s;
 	private String name;
 	private String addr;
 	private int port;
@@ -50,5 +50,5 @@ public class Client {
 	}
 	
 
-	
+	*/
 }
