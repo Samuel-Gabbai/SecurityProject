@@ -13,9 +13,9 @@ public class RepeatNetwork implements Runnable{
 	final private Charset charset = Charset.forName("UTF-8");
 
 	public RepeatNetwork(SocketChannel sc, SimpleClient cli) {
-		this.sc= sc;
-		this.client=cli;
-		this.bb= ByteBuffer.allocate(512);
+		this.sc = sc;
+		this.client =cli;
+		this.bb = ByteBuffer.allocate(512);
 	}
 
 	@Override

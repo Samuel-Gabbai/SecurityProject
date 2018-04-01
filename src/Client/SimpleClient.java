@@ -9,15 +9,16 @@ public class SimpleClient {
 	boolean isConnected=false;
 
 	
-	public SimpleClient(String addr , int port) throws IOException {
+	public SimpleClient (int port) throws IOException {
 		//inetAdress = addresse internevt ipV4 ou ipV6
 		//inetSocketAdrr equivalent de la structure en C;
 		
-		InetSocketAddress isa = new InetSocketAddress(addr, port);
+		InetSocketAddress isa = new InetSocketAddress(port);
 		sc = SocketChannel.open();
 		sc.configureBlocking(true); // Valuer par defaut pas oblige de mettre cette ligne
 		sc.connect(isa);
 		this.isConnected=true;
+	
 	}
 	
 	public boolean isConnected() {
@@ -40,7 +41,7 @@ public class SimpleClient {
 		rp.join();
 	}
 	public static void main(String[] args) throws IOException, InterruptedException {
-		SimpleClient client = new SimpleClient("127.0.0.1",8091);
+		SimpleClient client = new SimpleClient(2324);
 		client.start();
 	}
 	
